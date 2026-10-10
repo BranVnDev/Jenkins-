@@ -1,0 +1,22 @@
+jenkins:
+  systemMessage: "Jenkins versionado desde GitHub - jenkins repo"
+  numExecutors: 2
+jobs:
+  - script: >
+      pipelineJob('hola-mundo') {
+        definition {
+          cps {
+            script('''
+              pipeline {
+                agent any
+                stages {
+                  stage('Hola Mundo') {
+                    steps { echo 'Hola Mundo desde Jenkins versionado!' }
+                  }
+                }
+              }
+            ''')
+            sandbox(true)
+          }
+        }
+      }

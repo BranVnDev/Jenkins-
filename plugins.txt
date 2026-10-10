@@ -1,0 +1,6 @@
+configuration-as-code:latest
+git:latest
+workflow-aggregator:latest
+github-branch-source:latest
+dark-theme:latest
+theme-manager:latest
